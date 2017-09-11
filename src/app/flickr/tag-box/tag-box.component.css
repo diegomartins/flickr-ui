@@ -1,0 +1,11 @@
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag {
+    margin-left: 5px;
+    float: left;
+}
