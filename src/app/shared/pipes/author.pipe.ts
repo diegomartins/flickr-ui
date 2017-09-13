@@ -14,8 +14,6 @@ export class AuthorPipe implements PipeTransform {
     private extractTextBetweenQuotes(text: string) {
         const start = text.indexOf('"');
         const end = text.indexOf('"', start + 1);
-        console.log(text)
-        console.log(text.substring(start +1, end-start-1));
         return text.substr(start + 1, end-start-1);
     }
 }
