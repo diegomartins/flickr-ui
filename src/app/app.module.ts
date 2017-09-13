@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ApiModule } from "app/shared/api/api.module";
 import { SearchBarComponent, FlickrPanelComponent, ResultSetComponent, EntryComponent, TagBoxComponent } from "app/flickr";
 import { PipeModule, TaglibModule } from "app/shared";
+import { FlickrFooterComponent } from "app/flickr/flickr-footer/flickr-footer.component";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PipeModule, TaglibModule } from "app/shared";
     SearchBarComponent,
     ResultSetComponent,
     EntryComponent,
-    TagBoxComponent
+    TagBoxComponent,
+    FlickrFooterComponent
   ],
   imports: [
     BrowserModule,

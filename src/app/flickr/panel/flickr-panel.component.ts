@@ -10,7 +10,6 @@ export class FlickrPanelComponent {
     public results: Array<any>;
 
     updateResults(results) {
-        console.log("Updating results")
         this.results = results;
     }
 }
