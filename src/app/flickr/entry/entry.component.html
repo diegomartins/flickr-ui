@@ -1,8 +1,8 @@
-<div class="content">
-    <div class="wrapper">
+<div class="content" [class.hidden]="loadingImage">
+    <div class="wrapper clickable" (click)="imgLink.click()">
 
-        <a target="_blank" [href]="entry.link">
-            <img [src]="entry.media?.m" />
+        <a #imgLink target="_blank" [href]="entry.link">
+            <img [src]="entry.media?.m" (load)="imageLoaded()"/>
         </a>
 
         
@@ -10,7 +10,13 @@
             <label class="bottom author text">@{{entry.author | author}}</label>
         </div>
     </div>
-    <div class="drawer">
-        <tag-box class="tags" [tags]="entry.tags | strToArr"></tag-box>
+    <span class="drawer" *ngIf="entry.tags && entry.tags.length > 0">
+        <tag-box class="tags" [tags]="entry.tags | strToArr" (onTagClicked)="handleTagClicked($event)"></tag-box>
+    </span>
+</div>
+
+<!-- TODO: Add animated loading icon -->
+<div class="content loading" [class.hidden]="!loadingImage">
+    <div class="wrapper">
     </div>
 </div>
