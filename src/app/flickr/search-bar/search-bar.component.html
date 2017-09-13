@@ -1,2 +1,4 @@
-<p>Search</p>
-<input [(ngModel)]="searchTerm" (ngModelChange)="searchChanged($event)" />
+<div class="search-bar">
+    <input [(ngModel)]="searchTerm" (ngModelChange)="searchChanged($event)" placeholder="Enter some tags" autofocus/>
+    <i class="bar"></i>
+</div>
