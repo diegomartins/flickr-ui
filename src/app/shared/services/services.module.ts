@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PendingRequestsService } from "app/shared/services/pending-requests.service";
+import { TagSelectionService } from "app/shared/services/tag-selection.service";
 
 
 @NgModule({
@@ -9,7 +10,8 @@ import { PendingRequestsService } from "app/shared/services/pending-requests.ser
   ],
   declarations: [],
   providers: [
-    PendingRequestsService
+    PendingRequestsService,
+    TagSelectionService
   ]
 })
 export class ServicesModule { }
