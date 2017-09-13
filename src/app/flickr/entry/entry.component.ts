@@ -15,12 +15,10 @@ export class EntryComponent implements OnInit {
     constructor(private tagSelectionService: TagSelectionService) { }
 
     ngOnInit(): void {
-        console.log("ON INIT")
         this.loadingImage = true;
     }
 
     imageLoaded() {
-        console.log("CALLED")
         this.loadingImage = false;
     }
 
